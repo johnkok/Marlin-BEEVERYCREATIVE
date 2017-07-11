@@ -73,14 +73,11 @@
   #define MSG_AUTO_HOME_Z                     _UxGT("Home Z")
 #endif
 #ifndef MSG_LEVEL_BED_HOMING
-  #define MSG_LEVEL_BED_HOMING                _UxGT("Homing XYZ! Wait and press")
+  #define MSG_LEVEL_BED_HOMING                _UxGT("Wait, homing XYZ!")
 #endif
 //DR
 #ifndef MSG_LEVEL_BED_HOMING2
-  #define MSG_LEVEL_BED_HOMING2                _UxGT("Allow movement to")
-#endif
-#ifndef MSG_LEVEL_BED_HOMING3
-  #define MSG_LEVEL_BED_HOMING3                _UxGT("finish and press")
+  #define MSG_LEVEL_BED_HOMING2                _UxGT("Please wait.")
 #endif
 
 #ifndef MSG_LEVEL_BED_WAITING
@@ -846,6 +843,11 @@
 #endif
 #ifndef MSG_FILAMENT_CHANGE_NOZZLE
   #define MSG_FILAMENT_CHANGE_NOZZLE          _UxGT("  Nozzle: ")
+#endif
+
+//DR
+#ifndef MSG_FILAMENT_CHANGE_TITLE
+  #define MSG_FILAMENT_CHANGE_TITLE          _UxGT("FILAMENT CHANGE")
 #endif
 
 //
