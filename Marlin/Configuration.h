@@ -283,10 +283,19 @@
 //#define TEMP_SENSOR_1_AS_REDUNDANT
 #define MAX_REDUNDANT_TEMP_SENSOR_DIFF 10
 
+
 // Extruder temperature must be close to target for this long before M109 returns success
+// DR - Improves M019 speed
+#define TEMP_RESIDENCY_TIME 3  // (seconds)
+#define TEMP_HYSTERESIS 5       // (degC) range of +/- temperatures considered "close" to the target one
+#define TEMP_WINDOW     5       // (degC) Window around target to start the residency timer x degC early.
+
+/**
+ // Extruder temperature must be close to target for this long before M109 returns success
 #define TEMP_RESIDENCY_TIME 10  // (seconds)
 #define TEMP_HYSTERESIS 5       // (degC) range of +/- temperatures considered "close" to the target one
-#define TEMP_WINDOW     2       // (degC) Window around target to start the residency timer x degC early.
+#define TEMP_WINDOW     2       // (degC) Window around target to start the residency timer x degC early. 
+ **/
 
 // Bed temperature must be close to target for this long before M190 returns success
 #define TEMP_BED_RESIDENCY_TIME 10  // (seconds)
@@ -340,7 +349,8 @@
   //#define  DEFAULT_Ki 1.08
   //#define  DEFAULT_Kd 114
   
-    #define  DEFAULT_Kp 12.36
+    //#define  DEFAULT_Kp 12.36
+    #define  DEFAULT_Kp 14.36
     #define  DEFAULT_Ki 0.40
     #define  DEFAULT_Kd 95.91
 

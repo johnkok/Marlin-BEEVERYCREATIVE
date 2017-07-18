@@ -1245,7 +1245,7 @@ void kill_screen(const char* lcd_msg) {
 	
 	void lcd_filament_change_hotendStatus() {
 		START_SCREEN();
-      STATIC_ITEM(MSG_FILAMENT__TITLE, true, true);
+      STATIC_ITEM(MSG_FILAMENT_CHANGE_TITLE, true, true);
       STATIC_ITEM(MSG_FILAMENT_CHANGE_HEATING_1);
       #ifdef MSG_FILAMENT_CHANGE_HEATING_2
         STATIC_ITEM(MSG_FILAMENT_CHANGE_HEATING_2);
@@ -1264,9 +1264,9 @@ void kill_screen(const char* lcd_msg) {
 	  lcd.print(" ");
   
 	  // Uint16t to show without decimal cases
-	  lcd.print((uint_16t)thermalManager.degHotend(active_extruder));
+	  lcd.print((unsigned long)thermalManager.degHotend(active_extruder));
 	  lcd.print("/");
-	  lcd.print((uint_16t)thermalManager.degTargetHotend(active_extruder));
+	  lcd.print((unsigned long)thermalManager.degTargetHotend(active_extruder));
 	  
 	  //lcd_implementation_drawmenu_static(_lcdLineNr, PSTR(MSG_FILAMENT_CHANGE_NOZZLE), false, true); 
       //lcd_implementation_drawmenu_(_lcdLineNr, thermalManager.degHotend(active_extruder), false, true); 
