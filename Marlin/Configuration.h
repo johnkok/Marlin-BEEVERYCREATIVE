@@ -487,7 +487,7 @@
 // DRV8825
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160,160,8000, 180}
 // Allegro 4988
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80,80,4000, 90}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160,160,8000, 90}
 
 /**
  * Default Max Feed Rate (mm/s)
